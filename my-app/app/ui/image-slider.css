@@ -1,0 +1,320 @@
+/* carousel */
+
+.hero .carousel{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+   
+    
+   
+}
+
+.hero .carousel .list {
+    display: flex;
+    width: 100% ;
+    height: 100%;
+    position: relative;
+   
+}
+
+.carousel::before {
+    content: ''; 
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(39, 76, 145, 0.5), rgba(0,0,0,0.0)); 
+    opacity: 1; 
+    z-index: 1; 
+}
+
+.hero .carousel .list .item{
+    width: 100%;
+    height: 100%;
+    inset: 0 0 0 0;
+    position: absolute;
+    display: none;    
+}
+
+.hero .carousel .list .item.prev{
+    width: 100%;
+    height: 100%;
+    inset: 0 0 0 0;
+    position: absolute;   
+    display: block;
+    z-index: 20;
+}
+
+.hero .carousel .list .item.active{
+    width: 100%;
+    height: 100%;
+    inset: 0 0 0 0;
+    position: absolute;
+    display: block;
+    transition: var(--transition);
+    z-index: 26;
+
+    
+}
+
+.hero .carousel .list .item.prev img{
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+    opacity: 1;
+    animation: hideImage;
+    transition: var(--transition);
+}
+
+@keyframes hideImage {
+    to{
+        opacity: 0;
+    }
+}
+
+.hero .carousel .list .item.active img{
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 220px;   
+    animation: showImage 1s linear forwards;
+}
+
+@keyframes showImage {
+    
+    to{
+        position: absolute; 
+       width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block; 
+    }
+}
+
+
+.hero .carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    left: 40px;
+    max-width: 100rem;
+    padding-right: 50%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+    z-index: 10;
+}
+.hero .carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.hero .carousel .list .item .title,
+.hero .carousel .list .item .topic{
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.hero .carousel .list .item .topic{
+    color: #f1683a;
+}
+.hero .carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.hero .carousel .list .item .buttons button{
+    display: flex;
+    
+}
+
+
+.hero .carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+
+/* thumbail */
+
+.thumbnail{
+    position: absolute;
+    width: 33.5%;
+    bottom: 50px;
+    left: 67%;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    transform: translate(100%);
+    animation: moveImage 1s linear forwards;
+    transition: var(--transition);
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    
+}
+
+@keyframes moveImage {
+    to {
+        transform: translate(0);
+    }
+}
+
+
+
+
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    left: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: 2px solid whitesmoke;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+/*              MEDIA QUERIES 
+                (Medium Screens)          */
+
+@media screen and (max-width: 1024px) {
+    .hero .carousel .list .item .content{
+        top: 30%;
+        padding-right: 20%;
+        max-width: 50rem;
+    }
+    .hero .carousel .list .item .author{
+        letter-spacing: 5px;
+    }
+    .hero .carousel .list .item .title,
+    .hero .carousel .list .item .topic{
+        font-size: 2em;
+
+    }
+    .hero .carousel .list .item .topic{
+        color: #f1683a;
+    }
+    .hero .carousel .list .item .buttons{
+        gap: 3px;
+        margin-top: 10px;
+    }
+
+    /* thumbail */
+
+    .thumbnail{
+        bottom: 30px;
+    }
+
+    .thumbnail .item{
+        width: 100px;
+        height: 170px;
+        
+    }
+
+    .thumbnail .item .content .title{
+        font-weight: 500;
+        font-size: smaller;
+    }
+    .thumbnail .item .content .description{
+        display: none;
+    }
+
+    /* arrows */
+    .arrows{
+        top: 85%;
+        left: 50%;
+    }
+
+}
+
+/*              MEDIA QUERIES 
+                (Medium Screens)          */
+
+@media screen and (max-width: 600px) {
+    .hero .carousel .list .item .content{
+        top: 20%;
+        padding-right: 10%;
+        max-width: 30rem;
+    }
+    .hero .carousel .list .item .author{
+        letter-spacing: 3px;
+        
+    }
+    .hero .carousel .list .item .title,
+    .hero .carousel .list .item .topic{
+        font-size: 1.2em;
+        margin-top: 1rem;
+
+    }
+    .hero .carousel .list .item .topic{
+        color: #f1683a;
+    }
+    .hero .carousel .list .item .buttons{
+        gap: 3px;
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: 40px;
+        margin-top: 10px;
+    }
+    .hero .carousel .list .item .buttons button{
+        padding: 2px;
+    }
+
+
+    /* thumbail */
+
+    .thumbnail{
+        display: none;
+    }
+
+    /* arrows */
+    .arrows{
+        top: 85%;
+        left: 45%;
+    }
+
+}

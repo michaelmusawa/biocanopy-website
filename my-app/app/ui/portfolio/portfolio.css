@@ -1,0 +1,112 @@
+.container .section-header .section-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60%;
+    margin: auto;
+}
+
+.container .section-header .section-header-content button{
+    display: none;
+}
+
+.container .section-header .section-header-content p{
+    text-align: center;
+}
+
+/*==== services ======*/
+
+.container .portfolio-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.container .portfolio-wrapper .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-direction: column;
+    max-width: 450px;
+    margin:auto;
+}
+.container .portfolio-wrapper .image-container img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+   
+
+}
+
+.container .portfolio-wrapper .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom:1px solid grey ;
+    border-radius: 20px;
+    box-shadow: rgba(58, 58, 93, 0.4) 0px 15px 25px -5px;
+    padding: 20px 20px 0 20px;
+    max-height: 40em;
+    
+}
+
+.container .portfolio-wrapper .content-container .category:last-child {
+    border:none;
+}
+
+.container .portfolio-wrapper .content-container .category{
+    border-bottom: 2px solid grey;
+    margin-bottom: 20px;
+    padding-bottom:20px;
+}
+
+.container .portfolio-wrapper .image-container img{
+    border-radius: 20px;
+    box-shadow: rgba(58, 58, 93, 0.4) 0px 15px 25px -5px;
+    margin: 20px;
+}
+
+.container .portfolio-wrapper .image-container img:first-child{
+    transform: rotate(-3deg) translateX(-100px);
+}
+.container .portfolio-wrapper .image-container img:nth-child(2){
+    transform: rotate(3deg) translateX(100px);
+}
+
+/*==== supplies ======*/
+
+.container .supplies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'first-column sec-column';   
+    width: 100%;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.container .supplies .content-container {
+    grid-area: sec-column;
+}
+.container .supplies .image-container {
+    grid-area: first-column;
+}
+
+/*==== cleaning ======*/
+
+.container .clean {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'first-column sec-column';   
+    width: 100%;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.container .clean .content-container {
+    grid-area: sec-column;
+}
+.container .supplies .image-container {
+    grid-area: first-column;
+}

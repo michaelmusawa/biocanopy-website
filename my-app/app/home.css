@@ -1,0 +1,133 @@
+.about {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.about .left-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.about .left-container h5, h3, p {
+    padding: 2px;
+}
+.about .left-container button{
+    align-self: center;
+}
+
+.about .right-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.about .right-container .card::before {
+    content: '';
+    background-image: linear-gradient(transparent , rgb(68, 68, 68) );
+    border-radius: 20px;
+}
+
+
+
+/* ==========  Services =========*/
+.services {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.services .section-header {
+    display: flex;
+    align-items: center;
+}
+
+.services .section-header .section-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services .section-header .section-header-content p {
+    text-align: center;
+}
+
+/*=========  Members =================*/
+
+.members {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.members .left-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.members .right-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.members .right-container h5, h3, p {
+    padding: 2px;
+}
+.members .right-container button{
+    align-self: center;
+}
+
+
+
+
+
+/*              MEDIA QUERIES 
+                (Medium Screens)          */
+
+@media screen and (max-width: 1024px) {
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2 1fr);
+        gap: 2rem;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .container {
+        width: var(--container-width-md);
+    }
+
+    .about .left-container {
+        display: flex;
+        align-items: flex-start;
+        padding: 5px;
+        flex-direction: column;
+    }
+    .about .right-container {
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 20px;
+    
+    }
+    
+    .about .right-container .card::before {
+        content: '';
+        background-image: linear-gradient(transparent , rgb(68, 68, 68) );
+    }
+    
+
+}

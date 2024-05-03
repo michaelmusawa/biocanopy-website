@@ -1,0 +1,35 @@
+
+
+.carousel-container {
+    height: 60vh;
+    padding: 0;
+}
+.carousel-item {
+
+    transition: var(--transition);
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 20px 0 20px;
+    
+}
+
+.carousel-item p {
+    color: #fff;
+}
+.carousel-item img {
+    scale: 0.8;
+    opacity: 0;
+    height: 30rem;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+}
+
+@keyframes fade-in {
+    to { scale: 1; opacity: 1;}
+}
+
+
+
