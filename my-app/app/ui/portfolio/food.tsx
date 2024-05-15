@@ -5,19 +5,21 @@ import PortfolioUi from './portfolio'
 const Food = () => {
   return (
     <PortfolioUi
-      title='Food & Cereals'
-      subtitle='Delicacy Supply for Your Business'
-      headerContent='Biocanopy Limited Company is a young company sprouting from the ground up, our team have enoupur experience and expertise the the main areas that we deal in. We believe in quality workmanship and strive to provide you with the best service possible.'
+      title='Food Fruits & Cereals'
+      subtitle='Delicacy & Freshness Supply'
+      headerContent=''
       container='food'
       contentTitle1='Cereals'
-      contentTitle2='Food'
-      contentTitle3='Fruits'
-      content1='We supply cereals for children and adults alike, including popular brands like Kellogg’s Corn Flakes'
-      content2='Food supply is often a challenge in developing countries, and it’s important to make sure that the products you provide are
+      contentTitle2='Food & Fruits'
+      contentTitle3='Moringa'
+      content1='We supply cereals for children and adults alike, including popular brands like Kellogg&apos;s Corn Flakes'
+      content2='Food supply is often a challenge in developing countries, and it&apos;s important to make sure that the products you provide are
       I am a professional catering service specializing in providing delicious and healthy meals for all occasions, whether it be business meet'
-      content3='Fresh fruits are often used in the workplace as a healthy snack, and can be provided to employees on company'
-      image1='/images/receptionist.jpg'
-      image2='/images/printer-fleet.jpg'
+      content3='Moringa seeds are the main product we supply. They are a nutritious food source for humans and animals.
+      Moringa oil is the main product we supply, it&apos;s a rich source of antioxidants and has been used for centuries.
+      Moringa finished products that you can use in your home, office or as gifts.'
+      image1='/images/fruits.jpg'
+      image2='/images/moringa-products.jpg'
     />
     
   )

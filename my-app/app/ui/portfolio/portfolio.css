@@ -3,16 +3,15 @@
     flex-direction: column;
     align-items: center;
     max-width: 60%;
-    margin: auto;
+   margin-inline: auto;
+   margin-top: 3.5rem;
 }
 
-.container .section-header .section-header-content button{
+.container .section-header .section-header-content button,
+.container .section-header .section-header-content p{
     display: none;
 }
 
-.container .section-header .section-header-content p{
-    text-align: center;
-}
 
 /*==== services ======*/
 
@@ -36,20 +35,35 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-   
-
 }
 
 .container .portfolio-wrapper .content-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-content: center;
     border-bottom:1px solid grey ;
     border-radius: 20px;
-    box-shadow: rgba(58, 58, 93, 0.4) 0px 15px 25px -5px;
-    padding: 20px 20px 0 20px;
+    box-shadow:var(--box-shadow);
+    padding: 2rem;
     max-height: 40em;
-    
+    transition: var(--transition);    
+}
+
+.container .portfolio-wrapper .content-container:hover {
+    scale:1.03;
+    box-shadow: var(--box-shadow-hovered);
+    transform: rotate(-0.7deg);    
+}
+
+.container .portfolio-wrapper .content-container h4{
+    font-size: 1.3rem;
+    color:rgb(0, 0, 0, 0.9);
+}
+
+.container .portfolio-wrapper .content-container p{
+    font-size: 1rem;
+    margin-top: 3px;
 }
 
 .container .portfolio-wrapper .content-container .category:last-child {
@@ -63,16 +77,33 @@
 }
 
 .container .portfolio-wrapper .image-container img{
+    max-width: 450px;
+    max-height: 330px;
+    object-fit: cover;
+    background-image: transparent;
     border-radius: 20px;
-    box-shadow: rgba(58, 58, 93, 0.4) 0px 15px 25px -5px;
+    box-shadow: var(--box-shadow);
     margin: 20px;
+    transition: var(--transition);
 }
 
 .container .portfolio-wrapper .image-container img:first-child{
     transform: rotate(-3deg) translateX(-100px);
 }
+
+.container .portfolio-wrapper .image-container img:first-child:hover{
+    transform: rotate(0deg) translateX(-50px);
+    scale:1.05;
+    box-shadow: var(--box-shadow-hovered);
+}
 .container .portfolio-wrapper .image-container img:nth-child(2){
     transform: rotate(3deg) translateX(100px);
+}
+
+.container .portfolio-wrapper .image-container img:nth-child(2):hover{
+    transform: rotate(0deg) translateX(50px);
+    scale:1.05;
+    box-shadow: var(--box-shadow-hovered);
 }
 
 /*==== supplies ======*/

@@ -3,64 +3,30 @@
 
 import { ImageSlider } from '@app/ui/image-slider'
 import '@app/home.css'
-import Card from './ui/card'
-import CardSlider from './ui/carousel'
-import Testimonials from './ui/testimonials'
-import SectionHeader from './ui/section-header'
-import TeamCard from './ui/team-card'
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react'
-
-const variants = {
-  initial: {
-    x: -500,
-    y: 100, 
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    y: 0,
-    opacity: 1,
-    transition: { duration: 1, staggerChildren: 0.1 }
-  }
-}
-
-const cardVariants = {
-
-  initial: { opacity: 0, y: 100 },
-  animate: { opacity: 1, y: 0, transition: { duration: 1}}
-};
+import Card from '@app/ui/card'
+import CardSlider from '@app/ui/carousel'
+import Testimonials from '@app/ui/testimonials'
+import SectionHeader from '@app/ui/section-header'
+import TeamCard from '@app/ui/team-card'
 
 const Home = () => {
-  const ref = useRef<HTMLInputElement>(null)
-  const isInView = useInView(ref,{margin:'-400px'})
-
 
   return (
     <main>
       <section className='hero'>
         <ImageSlider />
       </section>
-      <motion.section
-        ref={ref}>
-        <motion.div 
-          className='container about'
-          
-          >
-          <motion.div 
-            className="left-container"
-            variants={variants}
-            initial='initial'
-            animate={isInView && 'animate'}>
+      <section>
+        <div className='container about'>
+          <div className="left-container">
             <SectionHeader
               h4 = 'About Us'
               h3 = 'The Solution To General Supplies'
               p = 'Biocanopy Limited Company is a young company sprouting from the ground up, our team have enoupur experience and expertise the the main areas that we deal in. We believe in quality workmanship and strive to provide you with the best service possible.'
               href='/about'
           />
-          </motion.div>
-          <motion.div className="right-container" 
-            variants={cardVariants}>
+          </div>
+          <div className="right-container">
             <Card 
               image='/images/mission.jpg'
               width={150}
@@ -87,19 +53,16 @@ const Home = () => {
               width={150}
               height={300}>
               <h4>Values</h4>
-              <p>We value and uphold the following principles:
-                    <ul>
-                      <li>- Professionalism</li>
-                      <li>- Reliability</li>
-                      <li>- Customer Satisfaction</li>
-                    </ul>
-                    
-                </p>
+              <p>We value and uphold the following principles:</p>
+                <ul>
+                  <li>- Professionalism</li>
+                  <li>- Reliability</li>
+                  <li>- Customer Satisfaction </li>                
+                </ul>
             </Card>
-          </motion.div>
-
-        </motion.div>
-      </motion.section>
+          </div>
+        </div>
+      </section>
       <section>
         <div className="container services">
           <SectionHeader
@@ -158,9 +121,7 @@ const Home = () => {
       </section>
       <section>
         <Testimonials />
-      </section> 
-      
-      
+      </section>       
     </main>
   )
 }

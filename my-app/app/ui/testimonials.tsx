@@ -40,9 +40,8 @@ const TestimonialSlider = () => {
             responsive={responsive}
             infinite={true}
             autoPlay={true }
-            autoPlaySpeed={1000}
+            autoPlaySpeed={10000}
             keyBoardControl={true}
-            customTransition="all 1"
             transitionDuration={5000}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -55,14 +54,13 @@ const TestimonialSlider = () => {
                 image={'/images/man.png'}
                 width={150}
                 height={300}>
+                  <h5>John D</h5>
                   <div className="quotes">
                       <ImQuotesLeft/>
                     </div>
                 <p className="testimonial__quote">
-                Lorem ipsum, Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website
+                  From pens to desks, and even snacks for our pantry, this company has everything we need! Their prompt delivery and quality products have made them our go-to for all office supplies.
                 </p>
-                <h5>John</h5>
-                <small className="testimonial__title">Accountant</small>
               </Card> 
             </div>
             <div className='carousel-item'>
@@ -70,14 +68,13 @@ const TestimonialSlider = () => {
                   image={'/images/man.png'}
                   width={150}
                   height={300}>
+                    <h5>Emily S</h5>
                     <div className="quotes">
                       <ImQuotesLeft/>
                     </div>
                   <p className="testimonial__quote">
-                  Lorem ipsum, Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website
+                    As a busy office manager, I appreciate the convenience of having one supplier for everything from stationery to cleaning supplies. This companys diverse offerings and reliable service make my job much easier.
                   </p>
-                  <h5>John</h5>
-                  <small className="testimonial__title">Accountant</small>
                 </Card> 
             </div>
             <div className='carousel-item'>
@@ -85,14 +82,13 @@ const TestimonialSlider = () => {
                   image={'/images/man.png'}
                   width={150}
                   height={300}>
+                    <h5>David L</h5>
                     <div className="quotes">
                       <ImQuotesLeft/>
                     </div>
                   <p className="testimonial__quote">
-                  Lorem ipsum, Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website
+                  Our office has never been cleaner thanks to their janitorial services! From regular cleaning to specialty tasks, they consistently exceed our expectations. Plus, their commitment to eco-friendly products aligns with our company values.
                   </p>
-                  <h5>John</h5>
-                  <small className="testimonial__title">Accountant</small>
                 </Card> 
             </div>
             <div className='carousel-item'>
@@ -100,14 +96,13 @@ const TestimonialSlider = () => {
                   image={'/images/man.png'}
                   width={150}
                   height={300}>
+                     <h5>Sarah H</h5>
                     <div className="quotes">
                       <ImQuotesLeft/>
                     </div>
                   <p className="testimonial__quote">
-                  Lorem ipsum, Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website
-                  </p>
-                  <h5>John</h5>
-                  <small className="testimonial__title">Accountant</small>
+                  I never knew I could get fresh fruits and cereals delivered alongside our office supplies until we found this company. Its a game-changer for our workplace wellness initiatives, and the team loves the variety!
+                 </p>
                 </Card> 
             </div>
             <div className='carousel-item'>
@@ -115,14 +110,13 @@ const TestimonialSlider = () => {
                   image={'/images/man.png'}
                   width={150}
                   height={300}>
+                    <h5>Michael W</h5>
                     <div className="quotes">
                       <ImQuotesLeft/>
                     </div>
                   <p className="testimonial__quote">
-                  Lorem ipsum, Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website Some shit about the company to make people buy and visit the website
+                  Furniture shopping used to be a headache, but not anymore! This company offers a wide selection of stylish and functional office furniture. Their expert advice helped us transform our workspace into a productive environment.
                   </p>
-                  <h5>John</h5>
-                  <small className="testimonial__title">Accountant</small>
                 </Card> 
             </div>
           </Carousel>;

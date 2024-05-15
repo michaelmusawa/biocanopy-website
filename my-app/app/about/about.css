@@ -23,6 +23,96 @@
     margin-bottom: 1rem;
 }
 
+.about__drive .section-header .section-header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.about__drive .section-header .section-header-content a,
+.about__drive .section-header .section-header-content p{
+    display: none
+}
+
+
+.about__drive .drive-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-top: 7rem;
+    position: relative;
+}
+
+.about__drive .drive-wrapper h4 {
+    position: absolute;
+    top: -50px;
+    left: 40%;
+
+}
+
+.about__drive .drive-wrapper img {
+    border-radius: 20px;
+
+}
+
+.about__drive .drive-wrapper .about-vision-container,
+.about__drive .drive-wrapper .about-mission-container,
+.about__drive .drive-wrapper .about-values-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition); 
+    
+       
+}
+
+.about__drive .drive-wrapper .about-vision-container:hover,
+.about__drive .drive-wrapper .about-mission-container:hover,
+.about__drive .drive-wrapper .about-values-container:hover {
+    box-shadow: var(--box-shadow-hovered); 
+    z-index: 20;  
+    scale:1.1;
+    overflow: visible;
+}
+
+.about__drive .drive-wrapper .content-wrapper{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3rem;
+    scale: 1 1;
+    margin-top: 2rem;
+    padding-inline: 20px;
+    border-radius: 20px;
+    transition: var(--transition); 
+    
+}
+
+.about__drive .drive-wrapper .content-wrapper:hover{
+    scale: 1 1.1;
+    transform-origin: 0;
+    transform: translateY(1rem -1rem);
+    background-image: linear-gradient(to top, #f1683a, transparent);
+}
+
+.about__section-content .section-header .section-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.about__section-content .section-header .section-header-content p,
+.about__section-content .section-header .section-header-content a {
+    display: none;
+
+}
+
 .about__story-container,
 .about__mission-container {
     display: grid;
@@ -33,13 +123,85 @@
 }
 
 .about__vision-container,
-.about__whyus-container {
+.about__whyUs-container {
     display: grid;
     grid-template-columns: 50% 40%;
     gap: 10%;
     align-items: center;
     height: 100%;
 }
+
+/*=========  Members =================*/
+
+.members {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.members .members-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.members .members-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.members .members-content h5, 
+.members .members-content h3, 
+.members .members-content p {
+    padding: 2px;
+}
+.members .members-content .section-header .section-header-content a{
+    display: none;
+}
+
+.member {
+    position: relative;
+    height: 100%;
+}
+
+
+.member .content {
+    position: absolute;
+    max-width: 40%;
+    left: 33%;
+    margin-top: 2rem;
+    height: 90%; 
+    z-index: 56;  
+   
+}
+
+.member .content::before {
+    content:"";
+    position: absolute;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    border: 1px solid red;    
+    
+}
+
+.member .content h5,
+.member .content h4,
+.member .content p {
+    font-size: 1rem;
+
+}
+
+
+
+
 
 /* Media Queries (medium screens) */
 @media screen and (max-width: 1024px) {
@@ -54,7 +216,7 @@
     .about__story-container,
     .about__vision-container,
     .about__mission-container,
-    .about__whyus-container {
+    .about__whyUs-container {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
@@ -74,7 +236,7 @@
     .about__story-container,
     .about__mission-container,
     .about__vision-container,
-    .about__whyus-container {
+    .about__whyUs-container {
         gap: 2rem;
     }
 

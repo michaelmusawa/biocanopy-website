@@ -29,8 +29,7 @@ const PortfolioUi = (
         content3: string;
         image1: string;
         image2: string;
-    
-    }) => {
+        }) => {
   return (
     <section>
         <div className='container'>
@@ -44,7 +43,7 @@ const PortfolioUi = (
                 <div className='content-container'>
                     <div className="category">
                         <h4> {contentTitle1} </h4>
-                        <p>
+                        <p >
                             {content1}
                         </p>
                     </div>

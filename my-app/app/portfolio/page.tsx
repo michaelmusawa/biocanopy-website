@@ -10,11 +10,11 @@ const Portfolio = () => {
   return (
     <div>
       <Header 
-        title="Our Portfolio" 
+        title="What We Offer" 
+        otherTitle="Our Portfolio"
         image='/images/portfolio.jpg'
-        width={1800}
-        height={563}
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod et eveniet voluptas sequi aspernatur reiciendis. Voluptatibus minus nihil suscipit sunt.
+      >  Dive into our portfolio below to discover how we&apos;ve and can consistently 
+        bring innovative solutions and strategic insights to the table. We can do the same for your company! 
       </Header>
       <Services/>
       <Supplies/>

@@ -9,17 +9,17 @@ const Footer =() => {
   return (
     <footer>
         <div className="container footer__container">
-            <article>
-            <Link href='/' >
-              <Image
-                src="/images/logo.png"
-                alt="Logo"
-                width={100}
-                height={70}
-                className="nav-logo"
-              />
-                Biocanopy Supplies
-            </Link>
+            <article className='footer-logo'>
+                <Link href='/' >
+                    <Image
+                        src="/images/logo.png"
+                        alt="Logo"
+                        width={140}
+                        height={100}
+                        className="nav-logo"
+                    /> 
+                </Link>
+                <p> Biocanopy Supplies</p>
                 <div className="footer__socials">
                     <a href="https://linkedin.com/" target="_blank" rel="noreferrer noopener"><FaLinkedinIn/></a>
                     <a href="https://facebook.com/" target="_blank" rel="noreferrer noopener"><FaFacebookF/></a>
@@ -27,21 +27,20 @@ const Footer =() => {
                     <a href="https://instagram.com/" target="_blank" rel="noreferrer noopener"><AiFillInstagram/></a>
                 </div>
             </article>
-            <article>
+            <article className='perms'>
                 <h4>Permalinks</h4>
                 <Link href="/about">About</Link>
                 <Link href="/portfolio">Portifolio</Link>
                 <Link href="/contact">Contact</Link>
             </article>
-            <article>
+            <article className='perms'>
                 <h4>Insights</h4>
-                <Link href="/s">Blog</Link>
                 <Link href="/s">Case Studies</Link>
                 <Link href="/s">Events</Link>
                 <Link href="/s">Communities</Link>
                 <Link href="/s">FAQS</Link>
             </article>
-            <article>
+            <article className='perms'>
                 <h4>Get In Touch</h4>
                 <Link href="/contact">Contact Us</Link>
                 <Link href="/s">Support</Link>
